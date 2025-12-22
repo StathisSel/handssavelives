@@ -1,14 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
   const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-//  function handleFormSubmit(e) {
-//    e.preventDefault();
-//    alert('Η φόρμα είναι demo. Προσθέστε δικό σας backend (π.χ. PHP ή υπηρεσία φόρμας) για να λαμβάνετε τα στοιχεία.');
-//  }
+  const form = document.getElementById('contact-form');
+  const note = document.querySelector('.form-note');
 
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (note) note.textContent = "Αποστολή...";
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      const text = await res.text();
+
+      if (res.ok && text.trim() === "OK") {
+        if (note) note.textContent = "✅ Το μήνυμα στάλθηκε. Θα επικοινωνήσουμε σύντομα!";
+        form.reset();
+      } else {
+        if (note) note.textContent = "❌ Αποτυχία: " + text;
+      }
+    } catch (err) {
+      if (note) note.textContent = "❌ Σφάλμα δικτύου. Δοκιμάστε ξανά.";
+    }
+  });
 });

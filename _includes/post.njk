@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }} | Handssavelives</title>
+</head>
+<body>
+  <main style="max-width: 860px; margin: 40px auto; padding: 0 16px;">
+    <p><a href="/blog/">← Πίσω στα άρθρα</a></p>
+
+    <h1>{{ title }}</h1>
+    <p><small>{{ date | date("dd/MM/yyyy") }}</small></p>
+
+    <article>
+      {{ content | safe }}
+    </article>
+  </main>
+</body>
+</html>

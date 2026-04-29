@@ -34,7 +34,19 @@ nav ul a:hover{color:var(--blue)}
 .nav-item:hover .dropdown,.dropdown:hover,.nav-item.open .dropdown{display:block}
 .dropdown a{display:block;padding:10px 18px;font-size:0.79rem;color:var(--gray);letter-spacing:0.03em;text-transform:none!important;border-left:2px solid transparent;transition:all 0.15s;text-decoration:none}
 .dropdown a:hover{color:var(--blue);border-left-color:var(--blue);background:rgba(38,90,173,0.04)}
-/* Hero */
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:1100}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(244,246,251,0.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:20px 24px;z-index:999;flex-direction:column;gap:4px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{display:block;padding:12px 8px;font-size:0.88rem;color:var(--gray);text-decoration:none;font-weight:400;border-bottom:1px solid var(--border);letter-spacing:0.03em}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.nav-cta{background:var(--red);color:#fff!important;border-radius:3px;text-align:center;margin-top:8px;border:none;padding:12px}
+.mobile-menu .mobile-section{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);font-weight:600;padding:10px 8px 4px;border-bottom:none}
+@media(max-width:900px){.hamburger{display:flex}}
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:76px}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 48px 80px 80px}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:28px}
@@ -351,7 +363,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <div class="contact-item">
         <span class="contact-icon">✉️</span>
         <div><div class="contact-item-label">Email</div>
-        <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#84edeae2ebc4ece5eae0f7f7e5f2e1e8edf2e1f7aae3f6"><span class="__cf_email__" data-cfemail="b0d9ded6dff0d8d1ded4c3c3d1c6d5dcd9c6d5c39ed7c2">[email&#160;protected]</span></a></div></div>
+        <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#ff96919990bf979e919b8c8c9e899a9396899a8cd1988d"><span class="__cf_email__" data-cfemail="fc95929a93bc949d92988f8f9d8a9990958a998fd29b8e">[email&#160;protected]</span></a></div></div>
       </div>
       <div class="contact-item">
         <span class="contact-icon">📞</span>
@@ -609,7 +621,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_0" onclick="toggleMobileMenu('rti_detail_0')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_0">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti0_title">Επείγουσα Πρώτη Βοήθεια (ΚΑΡΠΑ σε Ενήλικες, Παιδιά και Βρέφη + AED)</h2>
@@ -680,7 +705,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_1" onclick="toggleMobileMenu('rti_detail_1')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_1">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti1_title">Πλήρης Εκπαίδευση Πρώτων Βοηθειών</h2>
@@ -751,7 +789,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_2" onclick="toggleMobileMenu('rti_detail_2')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_2">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti2_title">Βασική Υποστήριξη Ζωής (BLS)</h2>
@@ -822,7 +873,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_3" onclick="toggleMobileMenu('rti_detail_3')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_3">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti3_title">Καρδιοπνευμονική Αναζωογόνηση & Αυτόματη Εξωτερική Απινίδωση</h2>
@@ -893,7 +957,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_4" onclick="toggleMobileMenu('rti_detail_4')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_4">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti4_title">Πρώτες Βοήθειες (Τραυματισμοί & Ασθένειες)</h2>
@@ -964,7 +1041,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_5" onclick="toggleMobileMenu('rti_detail_5')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_5">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti5_title">Πρώτες Βοήθειες για Παιδιά & Βρέφη</h2>
@@ -1035,7 +1125,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_6" onclick="toggleMobileMenu('rti_detail_6')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_6">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti6_title">Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h2>
@@ -1106,7 +1209,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_7" onclick="toggleMobileMenu('rti_detail_7')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_7">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti7_title">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη</h2>
@@ -1177,7 +1293,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_8" onclick="toggleMobileMenu('rti_detail_8')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_8">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti8_title">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h2>
@@ -1248,7 +1377,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_9" onclick="toggleMobileMenu('rti_detail_9')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_9">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti9_title">Πρώτες Βοήθειες στην Εργασία CY</h2>
@@ -1319,7 +1461,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_10" onclick="toggleMobileMenu('rti_detail_10')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_10">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti10_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία CY</h2>
@@ -1390,7 +1545,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_11" onclick="toggleMobileMenu('rti_detail_11')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_11">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti11_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία GR</h2>
@@ -1461,7 +1629,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_12" onclick="toggleMobileMenu('rti_detail_12')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_12">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti12_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία + AED GR</h2>
@@ -1532,7 +1713,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_13" onclick="toggleMobileMenu('rti_detail_13')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_13">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti13_title">Πρώτες Βοήθειες στην Εργασία UK</h2>
@@ -1603,7 +1797,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+  <button class="hamburger" id="hamburger-rti_detail_14" onclick="toggleMobileMenu('rti_detail_14')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu-rti_detail_14">
+  <div class="mobile-section">Σεμινάρια</div>
+  <a href="#" onclick="closeMobileMenu();showPage('main');return false;">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="closeMobileMenu();showPage('erc');return false;">ERC</a>
+  <a href="#" onclick="closeMobileMenu();showPage('rti');return false;">RTI</a>
+  <div class="mobile-section">Πλοήγηση</div>
+  <a href="#" onclick="closeMobileMenu();mainScroll('why-us');return false;">Γιατί εμείς</a>
+  <a href="#" onclick="closeMobileMenu();mainScroll('how-it-works');return false;">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/935KhbJ0FQfVh5PoWG2D" target="_blank" class="nav-cta">Κλείστε θέση</a>
+</div>
 <div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti14_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία UK</h2>
@@ -2021,6 +2228,20 @@ document.addEventListener('click', function(e) {
     document.querySelectorAll('.nav-item.open').forEach(function(el){ el.classList.remove('open'); });
   }
 });
+
+function toggleMobileMenu(pageId) {
+  var id = pageId.replace(/-/g,'_');
+  var menu = document.getElementById('mobile-menu-' + id);
+  var btn = document.getElementById('hamburger-' + id);
+  if (!menu) return;
+  var isOpen = menu.classList.contains('open');
+  closeMobileMenu();
+  if (!isOpen) { menu.classList.add('open'); if(btn) btn.classList.add('open'); }
+}
+function closeMobileMenu() {
+  document.querySelectorAll('.mobile-menu.open').forEach(function(m){ m.classList.remove('open'); });
+  document.querySelectorAll('.hamburger.open').forEach(function(b){ b.classList.remove('open'); });
+}
 </script>
 </body>
 </html>

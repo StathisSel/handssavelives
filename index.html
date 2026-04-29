@@ -31,7 +31,7 @@ nav ul a:hover{color:var(--blue)}
 .nav-item:hover>a::after{transform:rotate(180deg)}
 .nav-item:hover::before{content:'';position:absolute;top:100%;left:-10px;right:-10px;height:20px;z-index:199}
 .dropdown{display:none;position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:6px;padding:8px 0;min-width:210px;box-shadow:0 8px 32px rgba(13,30,58,0.12);z-index:200}
-.nav-item:hover .dropdown,.dropdown:hover{display:block}
+.nav-item:hover .dropdown,.dropdown:hover,.nav-item.open .dropdown{display:block}
 .dropdown a{display:block;padding:10px 18px;font-size:0.79rem;color:var(--gray);letter-spacing:0.03em;text-transform:none!important;border-left:2px solid transparent;transition:all 0.15s;text-decoration:none}
 .dropdown a:hover{color:var(--blue);border-left-color:var(--blue);background:rgba(38,90,173,0.04)}
 /* Hero */
@@ -351,7 +351,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <div class="contact-item">
         <span class="contact-icon">✉️</span>
         <div><div class="contact-item-label">Email</div>
-        <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#6e070008012e060f000a1d1d0f180b0207180b1d40091c"><span class="__cf_email__" data-cfemail="6a03040c052a020b040e19190b1c0f06031c0f19440d18">[email&#160;protected]</span></a></div></div>
+        <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#84edeae2ebc4ece5eae0f7f7e5f2e1e8edf2e1f7aae3f6"><span class="__cf_email__" data-cfemail="b0d9ded6dff0d8d1ded4c3c3d1c6d5dcd9c6d5c39ed7c2">[email&#160;protected]</span></a></div></div>
       </div>
       <div class="contact-item">
         <span class="contact-icon">📞</span>
@@ -2000,6 +2000,27 @@ function setLang(lang) {
   document.querySelectorAll('[id^="btn-en"]').forEach(b => b.classList.toggle('active', lang==='en'));
 }
 setLang('el');
+</script>
+<script>
+// Mobile tap-to-open dropdown
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('.nav-item > a');
+  if (link) {
+    var item = link.parentElement;
+    var dropdown = item.querySelector('.dropdown');
+    if (dropdown) {
+      e.preventDefault();
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.nav-item.open').forEach(function(el){ el.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+      return;
+    }
+  }
+  // Close on outside click
+  if (!e.target.closest('.nav-item')) {
+    document.querySelectorAll('.nav-item.open').forEach(function(el){ el.classList.remove('open'); });
+  }
+});
 </script>
 </body>
 </html>

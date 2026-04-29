@@ -424,8 +424,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+
+  <button class="hamburger" id="hamburger-erc" onclick="toggleMobileMenu('erc')" aria-label="Menu" style="margin-left:auto">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="subpage-header">
+<div class="mobile-menu" id="mobile-menu-erc">
+  <span class="mobile-section" data-el="nav_seminars">Σεμινάρια</span>
+  <a href="#" onclick="showPage('main');closeMobileMenu();return false;" data-el="nav_all_seminars">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="showPage('erc');closeMobileMenu();return false;">ERC</a>
+  <a href="#" onclick="showPage('rti');closeMobileMenu();return false;">RTI</a>
+  <a href="#" onclick="mainScroll('why-us');closeMobileMenu();" data-el="nav_why">Γιατί εμείς</a>
+  <a href="#" onclick="mainScroll('how-it-works');closeMobileMenu();" data-el="nav_how">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/bolQR7qpefNMvHLbSW72" target="_blank" class="nav-cta" data-el="nav_cta">Κλείστε θέση</a>
+</div><div class="subpage-header">
   <div class="section-label">ERC — European Resuscitation Council</div>
   <h2 data-el="erc_h2">Βασική Υποστήριξη Ζωής με Χρήση Αυτόματου Εξωτερικού Απινιδωτή</h2>
   <p data-el="erc_sub">Πιστοποιημένο πρόγραμμα του Ευρωπαϊκού Συμβουλίου Αναζωογόνησης για εκπαίδευση BLS &amp; AED.</p>
@@ -489,8 +501,20 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
     </div>
   </div>
+
+  <button class="hamburger" id="hamburger-rti" onclick="toggleMobileMenu('rti')" aria-label="Menu" style="margin-left:auto">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="subpage-header">
+<div class="mobile-menu" id="mobile-menu-rti">
+  <span class="mobile-section" data-el="nav_seminars">Σεμινάρια</span>
+  <a href="#" onclick="showPage('main');closeMobileMenu();return false;" data-el="nav_all_seminars">Όλα τα σεμινάρια</a>
+  <a href="#" onclick="showPage('rti');closeMobileMenu();return false;">RTI</a>
+  <a href="#" onclick="showPage('erc');closeMobileMenu();return false;">ERC</a>
+  <a href="#" onclick="mainScroll('why-us');closeMobileMenu();" data-el="nav_why">Γιατί εμείς</a>
+  <a href="#" onclick="mainScroll('how-it-works');closeMobileMenu();" data-el="nav_how">Πώς λειτουργεί</a>
+  <a href="https://links.dyo-sigma.com/widget/form/bolQR7qpefNMvHLbSW72" target="_blank" class="nav-cta" data-el="nav_cta">Κλείστε θέση</a>
+</div><div class="subpage-header">
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti_h2">Προγράμματα Πρώτων Βοηθειών RTI</h2>
   <p data-el="rti_sub">Διεθνώς αναγνωρισμένα πιστοποιητικά σεμιναρίων Πρώτων Βοηθειών και ΚΑΡΠΑ για όλους.</p>

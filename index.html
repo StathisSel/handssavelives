@@ -144,6 +144,8 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
 .subpage-header .section-label::before{background:#f04050}
 .subpage-header h2{color:#fff;position:relative;z-index:1;margin-bottom:12px}
 .subpage-header p{color:rgba(255,255,255,0.55);font-size:1rem;max-width:600px;position:relative;z-index:1}
+.share-link-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.8);padding:8px 18px;border-radius:4px;font-size:0.78rem;font-weight:500;cursor:pointer;letter-spacing:0.05em;transition:background 0.2s,color 0.2s;position:relative;z-index:1;margin-top:18px;font-family:var(--sans)}
+.share-link-btn:hover{background:rgba(255,255,255,0.18);color:#fff}
 .subpage-body{padding:80px;background:var(--cream)}
 /* ERC */
 .erc-detail{background:#fff;border:1px solid var(--border);border-radius:8px;padding:44px;max-width:760px}
@@ -441,6 +443,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">ERC — European Resuscitation Council</div>
   <h2 data-el="erc_h2">Βασική Υποστήριξη Ζωής με Χρήση Αυτόματου Εξωτερικού Απινιδωτή</h2>
   <p data-el="erc_sub">Πιστοποιημένο πρόγραμμα του Ευρωπαϊκού Συμβουλίου Αναζωογόνησης για εκπαίδευση BLS &amp; AED.</p>
+  <button id="copy-btn-erc" class="share-link-btn" onclick="copyPageLink('erc')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="erc-detail fade-up">
@@ -453,7 +456,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
     <p class="erc-lead" data-el="erc_card_lead">Σκοπός του σεμιναρίου είναι να αποκτήσει ο κάθε συμμετέχων επάρκεια στην εκτέλεση BLS και στη χρήση AED. Διαδραστική, πρακτική εκπαίδευση χωρίς προαπαιτούμενα γνώσεων.</p>
     <div class="erc-meta-grid">
       <div class="erc-meta-item"><div class="erc-meta-label" data-el="erc_meta1_label">Κοινό</div><div class="erc-meta-val" data-el="erc_meta1_val">Όλοι, όλες οι ηλικίες</div></div>
-      <div class="erc-meta-item"><div class="erc-meta-label" data-el="erc_meta2_label">Διάρκεια</div><div class="erc-meta-val" data-el="erc_meta2_val">Ημίωρο (min 4 ώρες)</div></div>
+      <div class="erc-meta-item"><div class="erc-meta-label" data-el="erc_meta2_label">Διάρκεια</div><div class="erc-meta-val" data-el="erc_meta2_val">Περίπου 4 ώρες</div></div>
       <div class="erc-meta-item"><div class="erc-meta-label" data-el="erc_meta3_label">Θεωρητικό μέρος</div><div class="erc-meta-val" data-el="erc_meta3_val">Δεν απαιτείται</div></div>
       <div class="erc-meta-item"><div class="erc-meta-label" data-el="erc_meta4_label">Ισχύς πιστοποιητικού</div><div class="erc-meta-val" data-el="erc_meta4_val">3 χρόνια</div></div>
     </div>
@@ -518,6 +521,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti_h2">Προγράμματα Πρώτων Βοηθειών RTI</h2>
   <p data-el="rti_sub">Διεθνώς αναγνωρισμένα πιστοποιητικά σεμιναρίων Πρώτων Βοηθειών και ΚΑΡΠΑ για όλους.</p>
+  <button id="copy-btn-rti" class="share-link-btn" onclick="copyPageLink('rti')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-grid">
@@ -675,6 +679,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti0_title">Επείγουσα Πρώτη Βοήθεια (ΚΑΡΠΑ σε Ενήλικες, Παιδιά και Βρέφη + AED)</h2>
   <p>Emergency First Aid (BLS/D-EPFA)</p>
+  <button id="copy-btn-rti-detail-0" class="share-link-btn" onclick="copyPageLink('rti-detail-0')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -759,6 +764,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti1_title">Πλήρης Εκπαίδευση Πρώτων Βοηθειών</h2>
   <p>Complete First Aid</p>
+  <button id="copy-btn-rti-detail-1" class="share-link-btn" onclick="copyPageLink('rti-detail-1')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -843,6 +849,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti2_title">Βασική Υποστήριξη Ζωής (BLS)</h2>
   <p>BLS: Basic Life Support</p>
+  <button id="copy-btn-rti-detail-2" class="share-link-btn" onclick="copyPageLink('rti-detail-2')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -927,6 +934,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti3_title">Καρδιοπνευμονική Αναζωογόνηση & Αυτόματη Εξωτερική Απινίδωση</h2>
   <p>Cardiopulmonary Resuscitation (CPR) & AED</p>
+  <button id="copy-btn-rti-detail-3" class="share-link-btn" onclick="copyPageLink('rti-detail-3')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1011,6 +1019,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti4_title">Πρώτες Βοήθειες (Τραυματισμοί & Ασθένειες)</h2>
   <p>First Aid</p>
+  <button id="copy-btn-rti-detail-4" class="share-link-btn" onclick="copyPageLink('rti-detail-4')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1095,6 +1104,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti5_title">Πρώτες Βοήθειες για Παιδιά & Βρέφη</h2>
   <p>Paediatric First Aid</p>
+  <button id="copy-btn-rti-detail-5" class="share-link-btn" onclick="copyPageLink('rti-detail-5')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1179,6 +1189,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti6_title">Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h2>
   <p>Paediatric First Aid + AED</p>
+  <button id="copy-btn-rti-detail-6" class="share-link-btn" onclick="copyPageLink('rti-detail-6')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1263,6 +1274,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti7_title">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη</h2>
   <p>Emergency Paediatric First Aid</p>
+  <button id="copy-btn-rti-detail-7" class="share-link-btn" onclick="copyPageLink('rti-detail-7')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1347,6 +1359,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti8_title">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h2>
   <p>Emergency Paediatric First Aid + AED</p>
+  <button id="copy-btn-rti-detail-8" class="share-link-btn" onclick="copyPageLink('rti-detail-8')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1431,6 +1444,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti9_title">Πρώτες Βοήθειες στην Εργασία CY</h2>
   <p>First Aid at Work CY</p>
+  <button id="copy-btn-rti-detail-9" class="share-link-btn" onclick="copyPageLink('rti-detail-9')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1515,6 +1529,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti10_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία CY</h2>
   <p>Emergency First Aid at Work CY</p>
+  <button id="copy-btn-rti-detail-10" class="share-link-btn" onclick="copyPageLink('rti-detail-10')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1599,6 +1614,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti11_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία GR</h2>
   <p>Emergency First Aid at Work GR</p>
+  <button id="copy-btn-rti-detail-11" class="share-link-btn" onclick="copyPageLink('rti-detail-11')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1683,6 +1699,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti12_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία + AED GR</h2>
   <p>Emergency First Aid at Work + AED GR</p>
+  <button id="copy-btn-rti-detail-12" class="share-link-btn" onclick="copyPageLink('rti-detail-12')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1767,6 +1784,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti13_title">Πρώτες Βοήθειες στην Εργασία UK</h2>
   <p>First Aid at Work UK</p>
+  <button id="copy-btn-rti-detail-13" class="share-link-btn" onclick="copyPageLink('rti-detail-13')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1851,6 +1869,7 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
   <div class="section-label">RTI — Rescue Training International</div>
   <h2 data-el="rti14_title">Επείγουσα Πρώτη Βοήθεια στην Εργασία UK</h2>
   <p>Emergency First Aid at Work UK</p>
+  <button id="copy-btn-rti-detail-14" class="share-link-btn" onclick="copyPageLink('rti-detail-14')">&#128279; Αντιγραφή συνδέσμου</button>
 </div>
 <div class="subpage-body">
   <div class="rti-detail-layout">
@@ -1899,19 +1918,40 @@ footer p{color:rgba(255,255,255,0.2);font-size:0.75rem;max-width:460px;line-heig
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 let currentLang = 'el';
 
-function showPage(pageId) {
+function showPage(pageId, updateHash) {
   document.getElementById('main-page').style.display = 'none';
   document.querySelectorAll('.subpage').forEach(p => p.style.display = 'none');
   if (pageId === 'main') {
     document.getElementById('main-page').style.display = 'block';
+    if (updateHash !== false) history.replaceState(null, '', window.location.pathname + window.location.search);
   } else {
     const el = document.getElementById('page-' + pageId) || document.getElementById(pageId);
     if (el) el.style.display = 'block';
+    if (updateHash !== false) history.replaceState(null, '', '#' + pageId);
   }
   window.scrollTo(0,0);
   setupObserver();
   setLang(currentLang);
 }
+
+function copyPageLink(pageId) {
+  const url = window.location.origin + window.location.pathname + '#' + pageId;
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById('copy-btn-' + pageId);
+    if (btn) { const orig = btn.innerHTML; btn.innerHTML = '&#10003; Αντιγράφηκε!'; setTimeout(() => btn.innerHTML = orig, 2000); }
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+    const btn = document.getElementById('copy-btn-' + pageId);
+    if (btn) { const orig = btn.innerHTML; btn.innerHTML = '&#10003; Αντιγράφηκε!'; setTimeout(() => btn.innerHTML = orig, 2000); }
+  });
+}
+
+// Handle hash on load
+(function() {
+  const hash = window.location.hash.replace('#','');
+  if (hash && hash !== 'main') { setTimeout(() => showPage(hash, false), 50); }
+})();
 
 function mainScroll(sectionId) {
   showPage('main');
@@ -2023,7 +2063,7 @@ T.en.erc_card_lead='The aim is to enable each candidate to gain competency in BL
 T.el.erc_meta1_label='Κοινό'; T.en.erc_meta1_label='Audience';
 T.el.erc_meta1_val='Όλοι, όλες οι ηλικίες'; T.en.erc_meta1_val='Everybody, all ages';
 T.el.erc_meta2_label='Διάρκεια'; T.en.erc_meta2_label='Duration';
-T.el.erc_meta2_val='Ημίωρο (min 4 ώρες)'; T.en.erc_meta2_val='Half day (min 4 hrs)';
+T.el.erc_meta2_val='περίπου 4 ώρες)'; T.en.erc_meta2_val='approx. 4 hrs)';
 T.el.erc_meta3_label='Θεωρητικό μέρος'; T.en.erc_meta3_label='Theory component';
 T.el.erc_meta3_val='Δεν απαιτείται'; T.en.erc_meta3_val='None required';
 T.el.erc_meta4_label='Ισχύς πιστοποιητικού'; T.en.erc_meta4_label='Certificate validity';

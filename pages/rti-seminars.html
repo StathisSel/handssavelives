@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Σεμινάρια RTI | Hands Save Lives</title>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    .programs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem}
+    .program-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;text-decoration:none;color:inherit}
+    .program-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--blue-light)}
+    .program-card-img{display:flex;align-items:center;justify-content:center;padding:1.25rem;background:#111}
+    .program-card-img img{width:100px;height:100px;object-fit:contain}
+    .program-card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column}
+    .program-card-body h3{font-size:.98rem;margin-bottom:.25rem;color:var(--dark);line-height:1.35}
+    .en-title{font-size:.75rem;color:var(--light);margin-bottom:.75rem;font-style:italic;font-family:var(--font-body)}
+    .program-price{font-family:var(--font-display);font-size:1.5rem;font-weight:900;color:var(--blue);padding-top:.75rem;border-top:1px solid var(--border);margin-top:auto;display:flex;align-items:baseline;gap:.3rem}
+    .program-price small{font-size:.8rem;font-weight:400;color:var(--light);font-family:var(--font-body)}
+    .detail-link{margin-top:.6rem;font-size:.8rem;color:var(--red);font-weight:500}
+    .category-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);background:var(--blue);display:inline-block;padding:.2rem .6rem;border-radius:4px;margin-bottom:.5rem}
+    .section-divider{margin:3rem 0 1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--border)}
+    .section-divider h2{font-size:1.4rem;color:var(--dark)}
+    .section-divider p{font-size:.9rem;color:var(--mid);margin-top:.25rem}
+    @media(max-width:600px){.programs-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <p style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.75rem">RTI — RESCUE TRAINING INTERNATIONAL</p>
+    <h1 data-lang="el">Προγράμματα<br/><em style="color:#EF5350">Πρώτων Βοηθειών RTI</em></h1>
+    <h1 data-lang="en">RTI<br/><em style="color:#EF5350">First Aid Programmes</em></h1>
+    <p data-lang="el">Διεθνώς αναγνωρισμένα πιστοποιητικά για όλους. Κάντε κλικ σε κάθε πρόγραμμα για λεπτομέρειες.</p>
+    <p data-lang="en">Internationally recognised certificates for everyone. Click any programme for full details.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+
+    <!-- GROUP 1: General -->
+    <div class="section-divider">
+      <span class="category-label" data-lang="el">Γενική Εκπαίδευση</span>
+      <span class="category-label" data-lang="en">General Training</span>
+      <h2 data-lang="el">Πρώτες Βοήθειες & Αναζωογόνηση</h2>
+      <h2 data-lang="en">First Aid & Resuscitation</h2>
+      <p data-lang="el">Προγράμματα για το ευρύ κοινό, γονείς και επαγγελματίες.</p>
+      <p data-lang="en">Programmes for the general public, parents and professionals.</p>
+    </div>
+    <div class="programs-grid">
+
+      <a href="rti/emergency-first-aid-bls.html" class="program-card">
+        <div class="program-card-img"><img src="../images/FIRST_AID_PROVIDER.png" alt="Emergency First Aid"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσα Πρώτη Βοήθεια (ΚΑΡΠΑ σε Ενήλικες, Παιδιά και Βρέφη + AED)</h3>
+          <h3 data-lang="en">Emergency First Aid (BLS for Adults, Children & Infants + AED)</h3>
+          <p class="en-title">Emergency First Aid (BLS/D-EPFA)</p>
+          <div class="program-price">145€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/complete-first-aid.html" class="program-card">
+        <div class="program-card-img"><img src="../images/COMPLETE_FIRST_AID.png" alt="Complete First Aid"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πλήρης Εκπαίδευση Πρώτων Βοηθειών</h3>
+          <h3 data-lang="en">Complete First Aid Training</h3>
+          <p class="en-title">Complete First Aid</p>
+          <div class="program-price">230€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/bls.html" class="program-card">
+        <div class="program-card-img"><img src="../images/BLS.png" alt="BLS"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Βασική Υποστήριξη Ζωής (BLS)</h3>
+          <h3 data-lang="en">Basic Life Support (BLS)</h3>
+          <p class="en-title">BLS: Basic Life Support</p>
+          <div class="program-price">110€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/cpr-aed.html" class="program-card">
+        <div class="program-card-img"><img src="../images/CPR-AED.png" alt="CPR AED"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Καρδιοπνευμονική Αναζωογόνηση & Αυτόματη Εξωτερική Απινίδωση</h3>
+          <h3 data-lang="en">Cardiopulmonary Resuscitation & AED</h3>
+          <p class="en-title">CPR & AED</p>
+          <div class="program-price">115€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/first-aid.html" class="program-card">
+        <div class="program-card-img"><img src="../images/FIRST_AID.png" alt="First Aid"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πρώτες Βοήθειες (Τραυματισμοί & Ασθένειες)</h3>
+          <h3 data-lang="en">First Aid (Injuries & Illnesses)</h3>
+          <p class="en-title">First Aid</p>
+          <div class="program-price">90€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- GROUP 2: Paediatric -->
+    <div class="section-divider">
+      <span class="category-label" data-lang="el">Παιδιατρική</span>
+      <span class="category-label" data-lang="en">Paediatric</span>
+      <h2 data-lang="el">Πρώτες Βοήθειες για Παιδιά & Βρέφη</h2>
+      <h2 data-lang="en">First Aid for Children & Infants</h2>
+      <p data-lang="el">Εξειδικευμένα προγράμματα για γονείς και παιδαγωγούς.</p>
+      <p data-lang="en">Specialist programmes for parents and childcare workers.</p>
+    </div>
+    <div class="programs-grid">
+
+      <a href="rti/paediatric-first-aid.html" class="program-card">
+        <div class="program-card-img"><img src="../images/PAEDIATRIC_FIRST_AID.png" alt="Paediatric First Aid"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πρώτες Βοήθειες για Παιδιά & Βρέφη</h3>
+          <h3 data-lang="en">Paediatric First Aid</h3>
+          <p class="en-title">Paediatric First Aid</p>
+          <div class="program-price">180€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/paediatric-first-aid-aed.html" class="program-card">
+        <div class="program-card-img"><img src="../images/PAEDIATRIC_FIRST_AID.png" alt="Paediatric First Aid AED"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h3>
+          <h3 data-lang="en">Paediatric First Aid + AED</h3>
+          <p class="en-title">Paediatric First Aid + AED</p>
+          <div class="program-price">185€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-paediatric-first-aid.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_PAEDIATRIC_FIRST_AID.png" alt="Emergency Paediatric First Aid"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη</h3>
+          <h3 data-lang="en">Emergency Paediatric First Aid</h3>
+          <p class="en-title">Emergency Paediatric First Aid</p>
+          <div class="program-price">120€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-paediatric-first-aid-aed.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_PAEDIATRIC_FIRST_AID.png" alt="Emergency Paediatric First Aid AED"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσες Πρώτες Βοήθειες για Παιδιά & Βρέφη + AED</h3>
+          <h3 data-lang="en">Emergency Paediatric First Aid + AED</h3>
+          <p class="en-title">Emergency Paediatric First Aid + AED</p>
+          <div class="program-price">125€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- GROUP 3: Workplace -->
+    <div class="section-divider">
+      <span class="category-label" data-lang="el">Εργασιακοί Χώροι</span>
+      <span class="category-label" data-lang="en">Workplace</span>
+      <h2 data-lang="el">Πρώτες Βοήθειες στην Εργασία</h2>
+      <h2 data-lang="en">First Aid at Work</h2>
+      <p data-lang="el">Πιστοποιημένα προγράμματα για εργοδότες και εργαζόμενους (GR / CY / UK).</p>
+      <p data-lang="en">Certified programmes for employers and workers (GR / CY / UK).</p>
+    </div>
+    <div class="programs-grid">
+
+      <a href="rti/first-aid-at-work-cy.html" class="program-card">
+        <div class="program-card-img"><img src="../images/FIRST_AID_AT_WORK.png" alt="First Aid at Work CY"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πρώτες Βοήθειες στην Εργασία CY</h3>
+          <h3 data-lang="en">First Aid at Work CY</h3>
+          <p class="en-title">First Aid at Work CY</p>
+          <div class="program-price">300€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-first-aid-at-work-cy.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_FIRST_AID_AT_WORK.png" alt="Emergency First Aid at Work CY"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσα Πρώτη Βοήθεια στην Εργασία CY</h3>
+          <h3 data-lang="en">Emergency First Aid at Work CY</h3>
+          <p class="en-title">Emergency First Aid at Work CY</p>
+          <div class="program-price">150€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-first-aid-at-work-gr.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_FIRST_AID_AT_WORK.png" alt="Emergency First Aid at Work GR"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσα Πρώτη Βοήθεια στην Εργασία GR</h3>
+          <h3 data-lang="en">Emergency First Aid at Work GR</h3>
+          <p class="en-title">Emergency First Aid at Work GR</p>
+          <div class="program-price">60€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-first-aid-at-work-aed-gr.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_FIRST_AID_AT_WORK.png" alt="Emergency First Aid at Work + AED GR"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσα Πρώτη Βοήθεια στην Εργασία + AED GR</h3>
+          <h3 data-lang="en">Emergency First Aid at Work + AED GR</h3>
+          <p class="en-title">Emergency First Aid at Work + AED GR</p>
+          <div class="program-price">75€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/first-aid-at-work-uk.html" class="program-card">
+        <div class="program-card-img"><img src="../images/FIRST_AID_AT_WORK.png" alt="First Aid at Work UK"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Πρώτες Βοήθειες στην Εργασία UK</h3>
+          <h3 data-lang="en">First Aid at Work UK</h3>
+          <p class="en-title">First Aid at Work UK</p>
+          <div class="program-price">350€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+      <a href="rti/emergency-first-aid-at-work-uk.html" class="program-card">
+        <div class="program-card-img"><img src="../images/EMERGENCY_FIRST_AID_AT_WORK.png" alt="Emergency First Aid at Work UK"/></div>
+        <div class="program-card-body">
+          <h3 data-lang="el">Επείγουσα Πρώτη Βοήθεια στην Εργασία UK</h3>
+          <h3 data-lang="en">Emergency First Aid at Work UK</h3>
+          <p class="en-title">Emergency First Aid at Work UK</p>
+          <div class="program-price">160€ <small>/ <span data-lang="el">άτομο</span><span data-lang="en">person</span></small></div>
+          <span class="detail-link" data-lang="el">Δείτε λεπτομέρειες →</span>
+          <span class="detail-link" data-lang="en">View details →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:4rem;padding:3rem;background:var(--cream);border-radius:var(--radius-lg);border:1px solid var(--border)">
+      <h2 style="font-size:1.75rem;margin-bottom:1rem" data-lang="el">Ενδιαφέρεστε για ομαδική εκπαίδευση;</h2>
+      <h2 style="font-size:1.75rem;margin-bottom:1rem" data-lang="en">Interested in group training?</h2>
+      <p style="color:var(--mid);margin-bottom:2rem" data-lang="el">Επικοινωνήστε μαζί μας για ειδικές τιμές σε ομάδες και εταιρείες.</p>
+      <p style="color:var(--mid);margin-bottom:2rem" data-lang="en">Contact us for special group and corporate rates.</p>
+      <a href="contact.html" class="btn btn-primary">
+        <span data-lang="el">Επικοινωνία</span><span data-lang="en">Contact Us</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script src="../js/components.js"></script>
+</body>
+</html>

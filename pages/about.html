@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Σχετικά με εμάς | Hands Save Lives</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .cert-badge {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .cert-badge:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .cert-icon { font-size: 2rem; margin-bottom: .5rem; }
+    .cert-badge strong { display: block; font-size: 1rem; color: var(--dark); }
+    .cert-badge span { font-size: .8rem; color: var(--light); }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-lang="el">Σχετικά με <em style="color:#EF5350">εμάς</em></h1>
+      <h1 data-lang="en">About <em style="color:#EF5350">Us</em></h1>
+      <p data-lang="el">Η αποστολή μας: να κάνουμε την εκπαίδευση πρώτων βοηθειών προσβάσιμη σε κάθε πολίτη.</p>
+      <p data-lang="en">Our mission: to make first aid training accessible to every citizen.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="container">
+      <div class="content-block" style="max-width:760px;margin:0 auto">
+
+        <h2 style="font-size:2rem;margin-bottom:1rem" data-lang="el">Ποιοι είμαστε</h2>
+        <h2 style="font-size:2rem;margin-bottom:1rem" data-lang="en">Who We Are</h2>
+
+        <p style="color:#444;font-size:1.05rem;margin-bottom:1.5rem" data-lang="el">
+          Το Hands Save Lives είναι μια ομάδα πιστοποιημένων εκπαιδευτών πρώτων βοηθειών και CPR. Πιστεύουμε ότι η γνώση που σώζει ζωές πρέπει να είναι διαθέσιμη σε όλους — ανεξάρτητα από ηλικία, εκπαίδευση ή επάγγελμα.
+        </p>
+        <p style="color:#444;font-size:1.05rem;margin-bottom:1.5rem" data-lang="en">
+          Hands Save Lives is a team of certified first aid and CPR instructors. We believe that life-saving knowledge must be available to everyone — regardless of age, background or profession.
+        </p>
+
+        <p style="color:#444;font-size:1.05rem;margin-bottom:1.5rem" data-lang="el">
+          Από το 2026 έχουμε εκπαιδεύσει πάνω από 1.000 άτομα σε σχολεία, εταιρείες, δήμους και αθλητικά σωματεία σε όλη την Ελλάδα.
+        </p>
+        <p style="color:#444;font-size:1.05rem;margin-bottom:1.5rem" data-lang="en">
+          Since 2026 we have trained over 1,000 people in schools, businesses, municipalities and sports clubs across Greece.
+        </p>
+
+        <p style="color:#444;font-size:1.05rem;margin-bottom:2rem" data-lang="el">
+          Όλοι οι εκπαιδευτές μας είναι πιστοποιημένοι από διεθνώς αναγνωρισμένους φορείς και ενημερώνονται συνεχώς με τις τελευταίες κατευθυντήριες οδηγίες.
+        </p>
+        <p style="color:#444;font-size:1.05rem;margin-bottom:2rem" data-lang="en">
+          All our instructors are certified by internationally recognised organisations and continuously updated with the latest guidelines.
+        </p>
+
+        <!-- Certification bodies -->
+        <h3 style="font-size:1.3rem;margin-bottom:.5rem" data-lang="el">Πιστοποιούμενοι Φορείς</h3>
+        <h3 style="font-size:1.3rem;margin-bottom:.5rem" data-lang="en">Certifying Bodies</h3>
+
+        <div class="cert-grid">
+          <div class="cert-badge">
+            <div class="cert-icon">🏅</div>
+            <strong>ERC</strong>
+            <span>European Resuscitation Council</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🎓</div>
+            <strong>RTI</strong>
+            <span>Rescue Training International</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🩸</div>
+            <strong>Stop the Bleed</strong>
+            <span>Hemorrhage Control</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🚑</div>
+            <strong>NAEMT</strong>
+            <span>National Assoc. of Emergency Medical Technicians</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/components.js"></script>
+</body>
+</html>

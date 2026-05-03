@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Επικοινωνία | Hands Save Lives</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+    .contact-item-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .contact-item strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+    .contact-item p { color: #666; font-size: .9rem; line-height: 1.5; }
+    .contact-item a { color: var(--blue); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    .social-links { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .5rem; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .45rem 1rem; border-radius: 50px;
+      border: 1px solid var(--border); font-size: .85rem; font-weight: 500;
+      color: var(--mid); transition: all .2s ease;
+    }
+    .social-link:hover { border-color: var(--red); color: var(--red); background: #fff5f5; }
+
+    /* iframe container */
+    .form-wrapper {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .form-wrapper iframe {
+      width: 100%;
+      height: 891px;
+      border: none;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      /* On mobile show info first, form below */
+      .contact-layout { display: flex; flex-direction: column-reverse; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-lang="el">Επι<em style="color:#EF5350">κοινωνία</em></h1>
+      <h1 data-lang="en"><em style="color:#EF5350">Contact</em> Us</h1>
+      <p data-lang="el">Οργανώστε ένα σεμινάριο ή ζητήστε περισσότερες πληροφορίες.</p>
+      <p data-lang="en">Organise a seminar or request more information.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- EMBEDDED FORM -->
+        <div class="form-wrapper">
+          <iframe
+            src="https://links.dyo-sigma.com/widget/form/bolQR7qpefNMvHLbSW72"
+            id="inline-bolQR7qpefNMvHLbSW72"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Handssavelives Website Contact Form GR"
+            data-height="891"
+            data-layout-iframe-id="inline-bolQR7qpefNMvHLbSW72"
+            data-form-id="bolQR7qpefNMvHLbSW72"
+            title="Handssavelives Website Contact Form GR"
+          ></iframe>
+          <script src="https://links.dyo-sigma.com/js/form_embed.js"></script>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <h3 data-lang="el">Στοιχεία Επικοινωνίας</h3>
+          <h3 data-lang="en">Contact Information</h3>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@handssavelives.gr">info@handssavelives.gr</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">📱</span>
+            <div>
+              <strong data-lang="el">Τηλέφωνο</strong>
+              <strong data-lang="en">Phone</strong>
+              <p><a href="tel:+306936898320">+30 693 689 8320</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">📍</span>
+            <div>
+              <strong data-lang="el">Περιοχή δραστηριότητας</strong>
+              <strong data-lang="en">Service Area</strong>
+              <p data-lang="el">Αθήνα & Πελοπόννησος<br/>Μετακινούμαστε σε όλη την Ελλάδα</p>
+              <p data-lang="en">Athens & Peloponnese<br/>We travel throughout Greece</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">⏰</span>
+            <div>
+              <strong data-lang="el">Ώρες Επικοινωνίας</strong>
+              <strong data-lang="en">Hours</strong>
+              <p data-lang="el">Δευτέρα – Παρασκευή: 09:00–18:00<br/>Σάββατο: 10:00–14:00</p>
+              <p data-lang="en">Monday – Friday: 09:00–18:00<br/>Saturday: 10:00–14:00</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item-icon">🌐</span>
+            <div>
+              <strong>Social Media</strong>
+              <div class="social-links" style="margin-top:.75rem">
+                <a href="https://www.facebook.com/Handssavelives.gr" target="_blank" rel="noopener" class="social-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Facebook
+                </a>
+                <a href="https://www.instagram.com/handssavelives_edu" target="_blank" rel="noopener" class="social-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  Instagram
+                </a>
+                <a href="https://www.linkedin.com/company/handssavelives" target="_blank" rel="noopener" class="social-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/components.js"></script>
+</body>
+</html>

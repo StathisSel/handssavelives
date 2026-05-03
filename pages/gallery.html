@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Γκαλερί | Hands Save Lives</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+    .lb-close {
+      position: fixed; top: 1.25rem; right: 1.5rem;
+      color: #fff; font-size: 2rem; cursor: pointer;
+      background: none; border: none; line-height: 1;
+      opacity: .7; transition: opacity .2s;
+    }
+    .lb-close:hover { opacity: 1; }
+    .lb-prev, .lb-next {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.12); border: none;
+      color: #fff; font-size: 1.8rem; padding: .75rem 1rem;
+      cursor: pointer; border-radius: var(--radius);
+      transition: background .2s;
+    }
+    .lb-prev { left: 1rem; }
+    .lb-next { right: 1rem; }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,.25); }
+
+    @media(max-width:600px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-lang="el"><em style="color:#EF5350">Γκαλερί</em></h1>
+      <h1 data-lang="en"><em style="color:#EF5350">Gallery</em></h1>
+      <p data-lang="el">Στιγμιότυπα από τα σεμινάρια και τις εκπαιδεύσεις μας.</p>
+      <p data-lang="en">Moments from our seminars and training sessions.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="../images/p1.jpg" alt="CPR Training — εκπαίδευση ανδρείκελο" loading="lazy"/>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="../images/p2.jpg" alt="Θεωρητικό μέρος σεμιναρίου" loading="lazy"/>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="../images/p3.jpg" alt="Πρακτική εκπαίδευση CPR & AED" loading="lazy"/>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="../images/p4.jpg" alt="Εκπαίδευση CPR με AED" loading="lazy"/>
+        </div>
+
+        <!--
+          ============================================================
+          ΠΩΣ ΝΑ ΠΡΟΣΘΕΣΕΤΕ ΦΩΤΟΓΡΑΦΙΕΣ:
+          1. Βάλτε τις φωτογραφίες στον φάκελο /images/
+          2. Αντιγράψτε ένα από τα παρακάτω blocks και αλλάξτε το src
+          ============================================================
+
+          <div class="gallery-item" onclick="openLightbox(4)">
+            <img src="../images/your-photo.jpg" alt="Περιγραφή" loading="lazy"/>
+          </div>
+
+          Σημαντικό: ενημερώστε και τον πίνακα images[] στο script παρακάτω
+          ============================================================
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" onclick="changeImg(-1)">‹</button>
+    <img id="lbImg" src="" alt=""/>
+    <button class="lb-next" onclick="changeImg(1)">›</button>
+  </div>
+
+  <script>
+    // Add your image paths here in the same order as the gallery grid
+    const images = [
+      '../images/p1.jpg',
+      '../images/p2.jpg',
+      '../images/p3.jpg',
+      '../images/p4.jpg',
+    ];
+
+    let current = 0;
+
+    function openLightbox(idx) {
+      current = idx;
+      document.getElementById('lbImg').src = images[current];
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function changeImg(dir) {
+      current = (current + dir + images.length) % images.length;
+      document.getElementById('lbImg').src = images[current];
+    }
+
+    // Close on backdrop click
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowLeft')  changeImg(-1);
+      if (e.key === 'ArrowRight') changeImg(1);
+      if (e.key === 'Escape')     closeLightbox();
+    });
+  </script>
+
+  <script src="../js/components.js"></script>
+</body>
+</html>

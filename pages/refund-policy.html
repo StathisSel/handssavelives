@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Πολιτική Επιστροφών & Ακυρώσεων | Hands Save Lives</title>
+  <link rel="icon" href="/images/logo.png" />
+  <script>
+    // Language toggle — same pattern as the rest of the site
+    const LANG_KEY = 'hsl_lang';
+    function getLang() { return localStorage.getItem(LANG_KEY) || 'el'; }
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? '' : 'none';
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.set === lang);
+      });
+      localStorage.setItem(LANG_KEY, lang);
+    }
+    document.addEventListener('DOMContentLoaded', () => applyLang(getLang()));
+  </script>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red:    #c0392b;
+      --dark:   #1a1a1a;
+      --mid:    #444;
+      --light:  #f5f5f5;
+      --white:  #ffffff;
+      --border: #ddd;
+      --radius: 10px;
+      --font:   'Segoe UI', Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── NAV (matches site) ── */
+    nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--red);
+      position: sticky; top: 0; z-index: 100;
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo img { height: 44px; display: block; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--dark); font-weight: 500;
+      font-size: 0.95rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .lang-toggle { display: flex; gap: .4rem; }
+    .lang-btn {
+      border: 1.5px solid var(--border); background: transparent;
+      padding: .25rem .65rem; border-radius: 4px; cursor: pointer;
+      font-size: .85rem; font-weight: 600; color: var(--mid);
+      transition: all .2s;
+    }
+    .lang-btn.active { background: var(--red); color: var(--white); border-color: var(--red); }
+
+    /* ── Hero banner ── */
+    .hero {
+      background: linear-gradient(135deg, var(--red) 0%, #8e1c13 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 2rem 3rem;
+    }
+    .hero .eyebrow {
+      font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
+      opacity: .75; margin-bottom: .6rem;
+    }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.25; }
+    .hero p { margin-top: .75rem; opacity: .85; font-size: 1rem; }
+
+    /* ── Main content ── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .effective-date {
+      font-size: .85rem; color: var(--mid); margin-bottom: 2.5rem;
+      border-left: 3px solid var(--red); padding-left: .75rem;
+    }
+
+    /* Sections */
+    section.policy-section { margin-bottom: 2.5rem; }
+    .policy-section h2 {
+      font-size: 1.15rem; font-weight: 700; color: var(--red);
+      margin-bottom: .75rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .policy-section h2 .num {
+      background: var(--red); color: var(--white);
+      width: 26px; height: 26px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .78rem; font-weight: 700; flex-shrink: 0;
+    }
+    .policy-section p { color: var(--mid); margin-bottom: .6rem; }
+    .policy-section ul {
+      list-style: none; padding-left: 0; color: var(--mid);
+    }
+    .policy-section ul li {
+      padding: .35rem 0 .35rem 1.4rem; position: relative;
+    }
+    .policy-section ul li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--red); font-weight: 700;
+    }
+
+    /* Info box */
+    .info-box {
+      background: var(--light); border-left: 4px solid var(--red);
+      border-radius: var(--radius); padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+    .info-box strong { color: var(--dark); }
+
+    /* Divider */
+    hr.section-divider {
+      border: none; border-top: 1.5px solid var(--border); margin: 3rem 0;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--light); border-radius: var(--radius);
+      padding: 1.5rem 1.75rem; margin-top: 2rem;
+    }
+    .contact-card h3 { font-size: 1rem; margin-bottom: .6rem; color: var(--dark); }
+    .contact-card a { color: var(--red); text-decoration: none; font-weight: 600; }
+
+    /* ── Footer (matches site) ── */
+    footer {
+      background: var(--dark); color: #aaa;
+      text-align: center; padding: 2rem 1rem;
+      font-size: .85rem;
+    }
+    footer a { color: #aaa; text-decoration: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav>
+  <a class="nav-logo" href="/index.html">
+    <img src="/images/logo.png" alt="Hands Save Lives" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/index.html"><span data-lang="el">Αρχική</span><span data-lang="en">Home</span></a></li>
+    <li><a href="/pages/erc-seminars.html"><span data-lang="el">Σεμινάρια ERC</span><span data-lang="en">ERC Seminars</span></a></li>
+    <li><a href="/pages/rti-seminars.html"><span data-lang="el">Σεμινάρια RTI</span><span data-lang="en">RTI Seminars</span></a></li>
+    <li><a href="/pages/contact.html"><span data-lang="el">Επικοινωνία</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn" data-set="el" onclick="applyLang('el')">🇬🇷 ΕΛ</button>
+    <button class="lang-btn" data-set="en" onclick="applyLang('en')">🇬🇧 EN</button>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+  <p class="eyebrow" data-lang="el">HandsSaveLives.gr</p>
+  <p class="eyebrow" data-lang="en">HandsSaveLives.gr</p>
+  <h1 data-lang="el">Πολιτική Επιστροφών &amp; Ακυρώσεων</h1>
+  <h1 data-lang="en">Refund &amp; Cancellation Policy</h1>
+  <p data-lang="el">Διαφανής και δίκαιη πολιτική για όλους τους συμμετέχοντες στα σεμινάριά μας.</p>
+  <p data-lang="en">A transparent and fair policy for all participants in our seminars.</p>
+</div>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main>
+
+  <p class="effective-date">
+    <span data-lang="el"><strong>Ημερομηνία ισχύος:</strong> Ιούνιος 2026</span>
+    <span data-lang="en"><strong>Effective date:</strong> June 2026</span>
+  </p>
+
+  <!-- ─── Section 1 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">1</span>
+      <span data-lang="el">Γενικές Αρχές</span>
+      <span data-lang="en">General Principles</span>
+    </h2>
+    <p data-lang="el">
+      Η HandsSaveLives (Argos Group G.P.) δεσμεύεται για την παροχή υπηρεσιών υψηλής ποιότητας. Η παρούσα πολιτική περιγράφει τους όρους ακύρωσης συμμετοχής, αναβολής σεμιναρίου και επιστροφής χρημάτων.
+    </p>
+    <p data-lang="en">
+      HandsSaveLives (Argos Group G.P.) is committed to delivering high-quality training services. This policy outlines the terms for cancellation of participation, seminar postponement, and refunds.
+    </p>
+  </section>
+
+  <!-- ─── Section 2 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">2</span>
+      <span data-lang="el">Ακύρωση από τον Συμμετέχοντα</span>
+      <span data-lang="en">Cancellation by the Participant</span>
+    </h2>
+    <p data-lang="el">Οι συμμετέχοντες μπορούν να ακυρώσουν την εγγραφή τους σύμφωνα με τους παρακάτω όρους:</p>
+    <p data-lang="en">Participants may cancel their registration under the following terms:</p>
+    <ul>
+      <li>
+        <span data-lang="el"><strong>Άνω των 14 ημερών πριν το σεμινάριο:</strong> Πλήρης επιστροφή χρημάτων ή μεταφορά σε άλλη ημερομηνία χωρίς χρέωση.</span>
+        <span data-lang="en"><strong>More than 14 days before the seminar:</strong> Full refund or free transfer to another date.</span>
+      </li>
+      <li>
+        <span data-lang="el"><strong>7–14 ημέρες πριν το σεμινάριο:</strong> Επιστροφή 50% του ποσού ή δωρεάν μεταφορά σε άλλη ημερομηνία.</span>
+        <span data-lang="en"><strong>7–14 days before the seminar:</strong> 50% refund or free transfer to another date.</span>
+      </li>
+      <li>
+        <span data-lang="el"><strong>Λιγότερο από 7 ημέρες πριν το σεμινάριο:</strong> Δεν γίνεται επιστροφή χρημάτων. Δυνατότητα αντικατάστασης συμμετέχοντα χωρίς επιπλέον χρέωση.</span>
+        <span data-lang="en"><strong>Less than 7 days before the seminar:</strong> No refund. Participant substitution is permitted at no extra charge.</span>
+      </li>
+    </ul>
+    <div class="info-box">
+      <span data-lang="el">💡 <strong>Αντικατάσταση:</strong> Μπορείτε να στείλετε άλλον συμμετέχοντα στη θέση σας οποτεδήποτε, ενημερώνοντάς μας γραπτώς πριν την έναρξη του σεμιναρίου.</span>
+      <span data-lang="en">💡 <strong>Substitution:</strong> You may send another participant in your place at any time by notifying us in writing before the seminar begins.</span>
+    </div>
+  </section>
+
+  <!-- ─── Section 3 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">3</span>
+      <span data-lang="el">Ακύρωση ή Αναβολή από την HandsSaveLives</span>
+      <span data-lang="en">Cancellation or Postponement by HandsSaveLives</span>
+    </h2>
+    <p data-lang="el">
+      Σε σπάνιες περιπτώσεις (π.χ. εκτάκτως μικρός αριθμός συμμετεχόντων, ανωτέρα βία, αδιαθεσία εκπαιδευτή), η HandsSaveLives διατηρεί το δικαίωμα να αναβάλει ή να ακυρώσει ένα σεμινάριο. Στην περίπτωση αυτή:
+    </p>
+    <p data-lang="en">
+      In rare circumstances (e.g. insufficient registrations, force majeure, instructor illness), HandySaveLives reserves the right to postpone or cancel a seminar. In such cases:
+    </p>
+    <ul>
+      <li>
+        <span data-lang="el">Οι συμμετέχοντες θα ειδοποιηθούν το συντομότερο δυνατό.</span>
+        <span data-lang="en">Participants will be notified as soon as possible.</span>
+      </li>
+      <li>
+        <span data-lang="el">Θα προσφερθεί πλήρης επιστροφή χρημάτων ή μεταφορά σε νέα ημερομηνία.</span>
+        <span data-lang="en">A full refund or transfer to a new date will be offered.</span>
+      </li>
+      <li>
+        <span data-lang="el">Δεν φέρουμε ευθύνη για έξοδα μετακίνησης ή διαμονής.</span>
+        <span data-lang="en">We are not liable for travel or accommodation costs incurred.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ─── Section 4 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">4</span>
+      <span data-lang="el">Διαδικασία Επιστροφής Χρημάτων</span>
+      <span data-lang="en">Refund Process</span>
+    </h2>
+    <p data-lang="el">
+      Οι επιστροφές χρημάτων πραγματοποιούνται μέσω της αρχικής μεθόδου πληρωμής εντός <strong>14 εργάσιμων ημερών</strong> από την επιβεβαίωση της ακύρωσης.
+    </p>
+    <p data-lang="en">
+      Refunds are processed via the original payment method within <strong>14 business days</strong> of cancellation confirmation.
+    </p>
+    <div class="info-box">
+      <span data-lang="el">Για να ξεκινήσει η διαδικασία επιστροφής, επικοινωνήστε μαζί μας γραπτώς στο <strong>info@handssavelives.gr</strong> ή τηλεφωνικώς στο <strong>+30 693 689 8320</strong>, αναφέροντας το ονοματεπώνυμό σας και την ημερομηνία του σεμιναρίου.</span>
+      <span data-lang="en">To initiate a refund, contact us in writing at <strong>info@handssavelives.gr</strong> or by phone at <strong>+30 693 689 8320</strong>, stating your full name and seminar date.</span>
+    </div>
+  </section>
+
+  <!-- ─── Section 5 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">5</span>
+      <span data-lang="el">Ηλεκτρονική Αγορά / Online Checkout</span>
+      <span data-lang="en">Online Purchase / Checkout</span>
+    </h2>
+    <p data-lang="el">
+      Για αγορές που πραγματοποιούνται μέσω του ηλεκτρονικού μας checkout (myPOS), ισχύουν οι ίδιοι όροι που περιγράφονται παραπάνω. Επιπλέον:
+    </p>
+    <p data-lang="en">
+      For purchases made through our online checkout (myPOS), the same terms described above apply. Additionally:
+    </p>
+    <ul>
+      <li>
+        <span data-lang="el">Η επιστροφή χρημάτων γίνεται στην κάρτα ή λογαριασμό που χρησιμοποιήθηκε για την αρχική πληρωμή.</span>
+        <span data-lang="en">Refunds are returned to the card or account used for the original payment.</span>
+      </li>
+      <li>
+        <span data-lang="el">Τυχόν τραπεζικές επιβαρύνσεις τρίτων δεν επιστρέφονται.</span>
+        <span data-lang="en">Any third-party bank charges are non-refundable.</span>
+      </li>
+      <li>
+        <span data-lang="el">Η επεξεργασία επιστροφής μπορεί να διαρκέσει έως 14 εργάσιμες ημέρες ανάλογα με τον πάροχο πληρωμής.</span>
+        <span data-lang="en">Refund processing may take up to 14 business days depending on the payment provider.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ─── Section 6 ─── -->
+  <section class="policy-section">
+    <h2><span class="num">6</span>
+      <span data-lang="el">Πιστοποιητικά & Υλικό</span>
+      <span data-lang="en">Certificates &amp; Materials</span>
+    </h2>
+    <p data-lang="el">
+      Σε περίπτωση επιτυχούς ολοκλήρωσης του σεμιναρίου, το πιστοποιητικό εκδίδεται αμέσως μετά. Δεν γίνεται επιστροφή χρημάτων για σεμινάρια που έχουν ολοκληρωθεί και πιστοποιητικά που έχουν εκδοθεί.
+    </p>
+    <p data-lang="en">
+      Upon successful completion of the seminar, the certificate is issued immediately afterwards. No refund is available for completed seminars where certificates have been issued.
+    </p>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ─── Contact ─── -->
+  <div class="contact-card">
+    <h3 data-lang="el">📩 Επικοινωνήστε μαζί μας</h3>
+    <h3 data-lang="en">📩 Contact Us</h3>
+    <p data-lang="el">
+      Για οποιαδήποτε απορία σχετικά με την παρούσα πολιτική, επικοινωνήστε μαζί μας:
+    </p>
+    <p data-lang="en">
+      For any questions regarding this policy, please contact us:
+    </p>
+    <p style="margin-top:.75rem;">
+      <strong data-lang="el">Τηλέφωνο:</strong><strong data-lang="en">Phone:</strong>
+      <a href="tel:+306936898320">+30 693 689 8320</a><br/>
+      <strong data-lang="el">Email:</strong><strong data-lang="en">Email:</strong>
+      <a href="mailto:info@handssavelives.gr">info@handssavelives.gr</a><br/>
+      <strong data-lang="el">Ιστότοπος:</strong><strong data-lang="en">Website:</strong>
+      <a href="https://www.handssavelives.gr">www.handssavelives.gr</a>
+    </p>
+    <p style="margin-top:.75rem; font-size:.85rem; color:#888;">
+      <span data-lang="el">HandsSaveLives · Argos Group G.P. · Άργος, Ελλάδα</span>
+      <span data-lang="en">HandsSaveLives · Argos Group G.P. · Argos, Greece</span>
+    </p>
+  </div>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <p>
+    <span data-lang="el">© 2025 HandsSaveLives.gr · Όλα τα δικαιώματα διατηρούνται.</span>
+    <span data-lang="en">© 2025 HandsSaveLives.gr · All rights reserved.</span>
+  </p>
+</footer>
+
+</body>
+</html>

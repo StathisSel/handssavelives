@@ -82,6 +82,7 @@ function injectFooter() {
           <li><a href="about.html"><span data-lang="el">Σχετικά</span><span data-lang="en">About</span></a></li>
           <li><a href="gallery.html"><span data-lang="el">Γκαλερί</span><span data-lang="en">Gallery</span></a></li>
           <li><a href="contact.html"><span data-lang="el">Επικοινωνία</span><span data-lang="en">Contact</span></a></li>
+          <li><a href="/pages/refund-policy.html"><span data-lang="el">Πολιτική Επιστροφών</span><span data-lang="en">Refund Policy</span></a></li>
         </ul>
       </div>
       <div class="footer-social">

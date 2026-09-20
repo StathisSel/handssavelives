@@ -39,10 +39,6 @@ function injectNavbar() {
           <span data-lang="el">Σχετικά</span>
           <span data-lang="en">About</span>
         </a></li>
-        <li><a href="ebooks.html">
-          <span data-lang="el">E-books</span>
-          <span data-lang="en">E-books</span>
-        </a></li>
         <li><a href="gallery.html">
           <span data-lang="el">Γκαλερί</span>
           <span data-lang="en">Gallery</span>
@@ -84,7 +80,6 @@ function injectFooter() {
         <h4 data-lang="en">Links</h4>
         <ul>
           <li><a href="about.html"><span data-lang="el">Σχετικά</span><span data-lang="en">About</span></a></li>
-          <li><a href="ebooks.html">E-books</a></li>
           <li><a href="gallery.html"><span data-lang="el">Γκαλερί</span><span data-lang="en">Gallery</span></a></li>
           <li><a href="contact.html"><span data-lang="el">Επικοινωνία</span><span data-lang="en">Contact</span></a></li>
           <li><a href="refund-policy.html"><span data-lang="el">Πολιτική Επιστροφών</span><span data-lang="en">Refund Policy</span></a></li>

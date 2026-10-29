@@ -29,6 +29,7 @@ function injectNavbar() {
           <ul class="dropdown">
             <li><a href="erc-seminars.html">Σεμινάρια ERC</a></li>
             <li><a href="rti-seminars.html">Σεμινάρια RTI</a></li>
+            <li><a href="pet-first-aid.html"><span data-lang="el">Πρώτες Βοήθειες σε Ζώα Συντροφιάς</span><span data-lang="en">Pet First Aid</span></a></li>
             <li><a href="first-aid-presentations.html">
               <span data-lang="el">Παρουσιάσεις Πρώτων Βοηθειών</span>
               <span data-lang="en">First Aid Presentations</span>

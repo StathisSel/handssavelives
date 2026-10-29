@@ -33,7 +33,8 @@ function injectNavbar() {
               <span data-lang="el">Παρουσιάσεις Πρώτων Βοηθειών</span>
               <span data-lang="en">First Aid Presentations</span>
             </a></li>
-          </ul>
+                    <li><a href="pet-first-aid.html"><span data-lang="el">Πρώτες Βοήθειες σε Ζώα Συντροφιάς</span><span data-lang="en">Pet First Aid</span></a></li>
+</ul>
         </li>
         <li><a href="about.html">
           <span data-lang="el">Σχετικά</span>

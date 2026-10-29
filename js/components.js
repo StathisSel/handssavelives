@@ -45,6 +45,7 @@ function injectNavbar() {
           <span data-lang="el">Γκαλερί</span>
           <span data-lang="en">Gallery</span>
         </a></li>
+        <li><a href="ebooks.html">E-books</a></li>
         <li><a href="contact.html">
           <span data-lang="el">Επικοινωνία</span>
           <span data-lang="en">Contact</span>

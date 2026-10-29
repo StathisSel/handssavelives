@@ -90,7 +90,8 @@ function injectFooter() {
         <a href="https://www.facebook.com/Handssavelives.gr" target="_blank" rel="noopener" class="social-btn">Facebook</a>
         <a href="https://www.instagram.com/handssavelives_edu" target="_blank" rel="noopener" class="social-btn">Instagram</a>
         <a href="https://www.linkedin.com/company/handssavelives" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
-        <p style="margin-top:1rem;font-size:.85rem">+30 693 689 8320</p>
+        <p style="margin-top:1rem;font-size:.85rem"><a href="tel:+306936898320" style="color:inherit;text-decoration:none">+30 693 689 8320</a></p>
+        <p style="margin-top:.35rem;font-size:.85rem"><a href="tel:+306908560461" style="color:inherit;text-decoration:none">+30 690 856 0461</a></p>
       </div>
     </div>
     <div class="footer-bottom">

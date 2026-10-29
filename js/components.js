@@ -36,11 +36,11 @@ function injectNavbar() {
                     <li><a href="pet-first-aid.html"><span data-lang="el">Πρώτες Βοήθειες σε Ζώα Συντροφιάς</span><span data-lang="en">Pet First Aid</span></a></li>
 </ul>
         </li>
+        <li><a href="partnerships.html"><span data-lang="el">Συνεργασίες</span><span data-lang="en">Partnerships</span></a></li>
         <li><a href="about.html">
           <span data-lang="el">Σχετικά</span>
           <span data-lang="en">About</span>
         </a></li>
-        <li><a href="partnerships.html"><span data-lang="el">Συνεργασίες</span><span data-lang="en">Partnerships</span></a></li>
         <li><a href="gallery.html">
           <span data-lang="el">Γκαλερί</span>
           <span data-lang="en">Gallery</span>
